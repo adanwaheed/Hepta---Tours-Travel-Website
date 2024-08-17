@@ -1,0 +1,754 @@
+@import url('https://fonts.googleapis.com/css?family=Trirong');
+
+body {
+    font-family: "Trirong", serif;
+    position: relative;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1000; 
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(185, 185, 185);
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    z-index: 1001; 
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: #000000;
+    border-radius: 2px;
+    transition: all 0.4s ease;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%; 
+    width: 100%; 
+    z-index: 999; 
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 0;
+    transform: translateY(-100%); 
+    padding-top: 77px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    padding-top: 37px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.menu ul li a:hover {
+    color: #2e94f3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.menu.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.div1{
+    height: 60vh;
+}
+
+.div1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80vh;
+    bottom: 0;
+    background-image: url('https://preview.colorlib.com/theme/hepta/images/img_5.jpg.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(1px);
+    z-index: -1;
+}
+
+.main1{
+    text-align: center;
+    margin-top: 2%;
+}
+
+#text1 {
+    padding-top: 70px;
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 1s, transform 1s;
+}
+
+#text2 {
+    padding-bottom: 100px;
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+}
+
+#text2 a {
+    color: grey;
+}
+
+#text2 a:hover {
+    color: rgb(255, 255, 255);
+    transition: all 0.4s ease;
+    text-decoration: overline;
+}
+
+#text1.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#text2.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container {
+    display: flex;
+    margin-top: 130px;
+}
+
+.contact-form {
+    margin-left: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.486);
+    margin-right: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group input:hover {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #42d6d6;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#message {
+    margin-top: 10px; 
+}
+
+#message:hover {
+    border: 1px solid #42d6d6;
+}
+
+.form-group-1 button {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #279696;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 17px;
+}
+
+.form-group-1 button:hover {
+    background-color: #42d6d6;
+    color: #fff;
+}
+
+.contact-info {
+    margin-left: 100px;
+    color: #333;
+}
+
+.contact-info p {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.contact-info span {
+    color: #279696;
+}
+
+.text9 {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 65px;
+    margin-top: 10%;
+    opacity: 0; 
+    transform: translateY(-50px); 
+}
+
+.testimonials {
+    text-align: left;
+    display: flex;
+    margin: 30px;
+    background-color: #ffffffa2;
+    padding: 2rem;
+    opacity: 0; 
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.testimonial {
+    margin-bottom: 2rem;
+}
+
+.testimonial:last-child {
+    margin-bottom: 0;
+}
+
+.testimonial img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.testimonial p {
+    font-size: 1.1rem;
+    margin: 0 0 1rem;
+    color: #555;
+}
+
+.author {
+    font-weight: bold;
+    color: #6b686871;
+}
+
+footer {
+    margin-top: 40px;
+    background-color: #000000ea;
+    color: white;
+    padding: 40px 0;
+    height: 100vh;
+}
+
+footer h5 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: grey;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+    transition: all 0.4s ease;
+}
+
+.footer-logo {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.footer-contact p {
+    margin: 0;
+}
+
+.social-icons {
+    text-align: center;
+}
+
+.socialmedia {
+    text-align: center;
+    color: grey;
+}
+
+.maincontact p {
+    color: grey;
+}
+
+.maincontact h5 {
+    font-size: 15px;
+}
+
+.maincontact h3 {
+    padding-bottom: 13px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.mainemail p {
+    color: grey;
+}
+
+.subemail {
+    display: flex;
+}
+
+#email {
+    max-width: 300px;
+    color: white;
+    background-color: #00000000;
+    border-color: #00000000;
+}
+
+.subemail button {
+    color: white;
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .hamburger {
+        width: 25px;
+        height: 15px;
+    }
+
+    .menu ul li {
+        padding-top: 20px;
+    }
+
+    .menu ul li a {
+        font-size: 25px;
+    }
+
+    .div1 {
+        height: 50vh;
+    }
+
+    .div1::before {
+        height: 70vh;
+    }
+
+    .main1 {
+        margin-top: 5%;
+        transform: translateY(20px);
+    }
+
+    #text1 {
+        font-size: 60px;
+        padding-top: 30px;
+    }
+
+    #text2 {
+        font-size: 20px;
+        padding-bottom: 50px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .contact-form {
+        margin: 0 20px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .contact-info {
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .contact-info p {
+        font-size: 25px;
+    }
+
+    .text9 {
+        font-size: 40px;
+        margin-top: 20%;
+    }
+
+    .testimonials {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonials h2 {
+        font-size: 2rem;
+    }
+
+    footer {
+        height: auto;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .footer-contact, .maincontact, .mainemail {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .subemail {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #email {
+        max-width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .footer-logo {
+        max-width: 80px;
+    }
+
+    .social-icons, .socialmedia, .footer-logo, .footer-contact, .maincontact, .mainemail {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .hamburger {
+        width: 20px;
+        height: 15px;
+    }
+
+    .menu ul li {
+        padding-top: 15px;
+    }
+
+    .menu ul li a {
+        font-size: 20px;
+    }
+
+    .div1 {
+        height: 40vh;
+    }
+
+    .div1::before {
+        height: 60vh;
+    }
+
+    .main1 {
+        margin-top: 5%;
+        transform: translateY(20px);
+    }
+
+    #text1 {
+        font-size: 50px;
+        padding-top: 20px;
+    }
+
+    #text2 {
+        font-size: 18px;
+        padding-bottom: 40px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .contact-form {
+        margin: 0 20px;
+        padding: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .contact-info {
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .contact-info p {
+        font-size: 22px;
+    }
+
+    .text9 {
+        font-size: 35px;
+        margin-top: 20%;
+    }
+
+    .testimonials {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        margin: 20px 0;
+    }
+
+    .testimonials h2 {
+        font-size: 1.8rem;
+    }
+
+    footer {
+        height: auto;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .footer-contact, .maincontact, .mainemail {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .subemail {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #email {
+        max-width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .footer-logo {
+        max-width: 70px;
+    }
+
+    .social-icons, .socialmedia, .footer-logo, .footer-contact, .maincontact, .mainemail {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 12px;
+        padding: 0 5px;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .hamburger {
+        width: 18px;
+        height: 12px;
+    }
+
+    .menu ul li {
+        padding-top: 10px;
+    }
+
+    .menu ul li a {
+        font-size: 18px;
+    }
+
+    .div1 {
+        height: 30vh;
+    }
+
+    .div1::before {
+        height: 50vh;
+    }
+
+    .main1 {
+        margin-top: 5%;
+        transform: translateY(10px);
+    }
+
+    #text1 {
+        font-size: 40px;
+        padding-top: 20px;
+    }
+
+    #text2 {
+        font-size: 16px;
+        padding-bottom: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .contact-form {
+        margin: 0 10px;
+        padding: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .contact-info {
+        margin-left: 0;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .contact-info p {
+        font-size: 20px;
+    }
+
+    .text9 {
+        font-size: 30px;
+        margin-top: 15%;
+    }
+
+    .testimonials {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        margin: 10px 0;
+    }
+
+    .testimonials h2 {
+        font-size: 1.5rem;
+    }
+
+    .testimonial img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .testimonial p {
+        font-size: 1rem;
+    }
+
+    footer {
+        height: auto;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .footer-contact, .maincontact, .mainemail {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .subemail {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #email {
+        max-width: 80%;
+        margin-bottom: 5px;
+    }
+
+    .footer-logo {
+        max-width: 50px;
+    }
+
+    .social-icons, .socialmedia, .footer-logo, .footer-contact, .maincontact, .mainemail {
+        text-align: center;
+    }
+}

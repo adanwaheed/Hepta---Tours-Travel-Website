@@ -1,0 +1,944 @@
+@import url('https://fonts.googleapis.com/css?family=Trirong');
+
+body {
+    font-family: "Trirong", serif;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1000;
+    overflow-x: hidden;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    z-index: 1001;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: #000000;
+    border-radius: 2px;
+    transition: all 0.4s ease;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 0;
+    transform: translateY(-100%);
+    padding-top: 77px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    padding-top: 37px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.menu ul li a:hover {
+    color: #2e94f3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.menu.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+
+.div1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('ship.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(2px);
+    z-index: -1;
+}
+
+.main1 {
+    text-align: center;
+    margin-top: 2%;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: fadeInUp 1s forwards;
+    overflow-x: hidden;
+}
+
+#text1 {
+    font-size: 100px;
+}
+
+#button1 {
+    border-radius: 8px;
+    border-color: rgb(255, 255, 255);
+    color: white;
+    padding: 17px;
+    margin-top: 80px;
+    background: none;
+}
+
+#button1:hover {
+    background-color: rgba(0, 0, 0, 0.808);
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.div2{
+    overflow: hidden;
+    height: 130vh;
+    margin-top: 22%;
+}
+.text3 {
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 30px;
+}
+.text4{
+    margin-left: 30px;
+    margin-right: 90px;
+}
+#manpic{
+    margin-left: 8%;
+}
+.animate-image {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.animate-image.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#video .bi{
+    margin-left: 30px;
+    font-size: 3rem;
+    color: #3b39392c;
+    margin-right: 0.5rem;
+}
+#video .bi:hover{
+    color: #2e94f3;
+    transition: all 0.3s ease;
+}
+#video a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color:#2e94f3;
+}
+
+.div3 {
+    margin-top: 10px;
+    overflow: hidden;
+    height: 164vh;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.text5 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.text6 {
+    font-size: 1em;
+    color: #777;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 10px;
+    margin: 14px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: fadeInUp 1s forwards;
+    animation-play-state: paused;
+}
+
+.item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.icon img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+}
+
+h5 {
+    font-size: 1.25em;
+    margin-bottom: 10px;
+}
+
+.item p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.div4{
+    background-image: url('/green\ pic.jpg');
+    background-size:cover;
+    background-attachment: fixed;
+    height: 300vh;
+}
+.text7{
+    padding-top: 10%;
+    font-size: 72px;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    font-weight:bolder;
+}
+.text8{
+    font-size: 20px;
+    margin-left: 17%;
+    margin-right: 17%;
+    text-align: center;
+}
+.div5 {
+    text-align: center;
+    padding: 50px 20px;
+    overflow-x: hidden;
+}
+
+#carouselExampleFade {
+    width: 950px;
+    margin: 0 auto; 
+    position: relative;
+    overflow-x: hidden;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+
+.div6 {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 0;
+    overflow-x: hidden;
+}
+
+
+
+.blog-section h2 {
+    font-size: 72px;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    font-weight:bolder;
+}
+
+.text-center2 {
+    font-size: 20px;
+    font-weight: 100px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.blog-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    transition: box-shadow 0.3s ease;
+    flex: 0 0 30%;
+    box-sizing: border-box;
+}
+
+.blog-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card img {
+    width: 100%;
+    height: auto;
+}
+
+.blog-content {
+    padding: 20px;
+}
+
+.blog-date {
+    color: #aaa;
+    font-size: 14px;
+    text-align: left;
+}
+
+.blog-title {
+    font-size: 30px;
+    text-align: left;
+    font-weight: bolder;
+    margin: 10px 0;
+}
+
+.blog-text {
+    text-align: left;
+    font-size: 16px;
+    color: #666;
+}
+
+.text9{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 65px;
+    margin-top: 4%;
+}
+
+.testimonials {
+    text-align: left;
+    display: flex;
+    margin: 30px;
+    background-color: #fff;
+    padding: 2rem;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.testimonial {
+    margin-bottom: 2rem;
+}
+
+.testimonial:last-child {
+    margin-bottom: 0;
+}
+
+.testimonial img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.testimonial p {
+    font-size: 1.1rem;
+    margin: 0 0 1rem;
+    color: #555;
+}
+
+.author {
+    font-weight: bold;
+    color: #6b686871;
+}
+
+
+.top-destination {
+    background-color: #fff;
+    padding: 4rem 0;
+}
+
+.card-body {
+    text-align: left;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.rating {
+    font-size: 1rem;
+    color: #555;
+}
+
+.rating span {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+
+
+footer {
+    background-color: #000000ea;
+    color: white;
+    padding: 40px 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+  footer h5 {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  footer a {
+    color: grey;
+    text-decoration: none;
+  }
+  footer a:hover {
+    color: white;
+    transition: all 0.4s ease;
+  }
+  .footer-logo {
+    max-width: 100px;
+    margin-bottom: 20px;
+  }
+  .footer-contact p {
+    margin: 0;
+  }
+  .social-icons{
+    text-align: center;
+  }
+  .socialmedia{
+    text-align: center;
+    color: grey;
+  }
+.maincontact p{
+    color: grey;
+}
+.maincontact h5{
+    font-size: 15px
+}
+.maincontact h3{
+    padding-bottom: 13px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.mainemail p{
+    color: grey;
+}
+.subemail{
+    display: flex;
+}
+#email{
+    max-width: 300px;
+    color: white;
+    background-color: #00000000;
+    border-color: #00000000;
+}
+.subemail button{
+    color: white;
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        flex-direction: row;
+        padding: 10px;
+        /* padding-top: 22px; */
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 30px; 
+        margin-bottom: 10px;
+    }
+
+    .hamburger {
+        width: 25px; 
+        height: 15px;
+    }
+
+    .menu ul li {
+        padding-top: 20%;
+    }
+
+    .menu ul li a {
+        font-size: 25px;
+    }
+
+    .main1 {
+        margin-top: 5%;
+        transform: translateY(50px);
+    }
+    .div1{
+        margin-top: 5rem;
+    }
+
+    #text1 {
+        font-size: 90px; 
+    }
+
+    #button1 {
+        padding: 12px;
+        margin-top: 50px;
+    }
+
+      .blog-section h2, .text9 {
+        font-size: 24px; 
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .text3{
+        font-size: 40px;
+        margin-top: 10px;
+    }
+    #manpic{
+        margin-top: 3rem;
+        height: auto;
+        width: 90%;
+    }
+    .text4{
+        font-size: 20px;
+    }
+    .div2{
+        margin-top: 45rem;
+        padding: 10px;
+        flex-direction: column;
+        height: auto;
+    }
+    .div3{
+        height: auto;
+    }
+    .div4{
+        background-position: top;
+    }
+    .text5, .text7, .text9{
+        font-size: 50px; 
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .div6 h2{
+        font-size: 50px;
+    }
+    .grid h5{
+        font-size: 25px;
+    }
+    .grid p{
+        font-size: 21px;
+    }
+    .div4, .div5, .div6 {
+        padding: 20px; 
+    }
+
+    .grid, .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item, .blog-card {
+        width: 90%; 
+    }
+
+    .carousel-inner img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .testimonials {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial img {
+        width: 80px;
+        height: 80px;
+    }
+
+    footer {
+        height: auto;
+        padding: 20px 0; 
+        text-align: center;
+    }
+
+    .footer-contact, .maincontact, .mainemail {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .subemail {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #email {
+        max-width: 80%;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px; 
+    }
+
+    header {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 24px; 
+        margin-bottom: 10px;
+    }
+
+    .hamburger {
+        width: 20px;
+        height: 15px;
+    }
+
+    .menu ul li {
+        padding-top: 15%;
+    }
+
+    .menu ul li a {
+        font-size: 20px; 
+    }
+
+    .main1 {
+        margin-top: 10%;
+        transform: translateY(50px); 
+    }
+
+    #text1 {
+        font-size: 50px; 
+    }
+    .div1{
+        margin-top: 200px;
+    }
+    #button1 {
+        padding: 10px;
+        margin-top: 40px;
+    }
+    #manpic{
+        margin-top: 8rem;
+        height:auto;
+        width:90%;
+    }
+
+    .text3, .text4, .blog-section h2, .text9 {
+        font-size: 18px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .text3{
+        font-size: 27px;
+    }
+    .text7, .text5 ,.text9{
+        font-size: 2rem;
+    }
+     .div3, .div4, .div5, .div6 {
+        padding: 15px; 
+    }
+    .div3{
+        height: auto;
+    }
+    .div2{
+        height: auto;
+        margin-top: 11rem;
+    }
+
+    .grid, .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .grid h5{
+        font-size: 22px;
+    }
+    .grid p{
+        font-size: 18px;
+    }
+    .div6 h2{
+        font-size: 2rem;
+    }
+    .item, .blog-card {
+        width: 95%;
+    }
+
+    #carouselExampleFade{
+        width: 80%;
+        height: auto;
+    }
+
+    .carousel-inner img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .testimonials {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial img {
+        width: 60px;
+        height: 60px;
+    }
+
+    footer {
+        padding: 20px 0; 
+        text-align: center;
+    }
+
+    .footer-contact, .maincontact, .mainemail {
+        margin: 0 auto;
+    }
+
+    .subemail {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #email {
+        max-width: 90%;
+        margin-bottom: 10px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 9px; 
+    }
+
+    header {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 24px; 
+        margin-bottom: 10px;
+    }
+
+    .hamburger {
+        width: 20px;
+        height: 15px;
+    }
+
+    .menu ul li {
+        padding-top: 15%;
+    }
+
+    .menu ul li a {
+        font-size: 20px; 
+    }
+    .main1 {
+        margin-top: 10%;
+        transform: translateY(50px); 
+    }
+
+    #text1 {
+        font-size: 50px; 
+    }
+
+    #button1 {
+        padding: 10px;
+        margin-top: 40px;
+    }
+    .div1{
+        height: auto;
+        margin-top: 9rem;
+    }
+    #manpic{
+        padding-top: 19rem;
+        height:auto;
+        width:90%;
+    }
+
+    .text3, .text4, .blog-section h2, .text9 {
+        font-size: 18px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .text7, .text5, .text9{
+        font-size: 2rem;
+    }
+     .div4, .div5, .div6 {
+        padding: 15px; 
+        height: auto;
+    }
+    #button1{
+        margin-bottom: 10.5rem;
+    }
+    .div2{
+        height: auto;
+        margin-top: auto;
+    }
+    .div3{
+        padding: 15px;
+        overflow: hidden;
+        height: auto;
+    }
+
+    .grid, .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .grid h5{
+        font-size: 20px;
+    }
+    .grid p{
+        font-size: 15px;
+    }
+    .div6 h2{
+        font-size: 2rem;
+    }
+    .item, .blog-card {
+        width: 95%;
+    }
+    #carouselExampleFade{
+        width: 80%;
+        height: auto;
+    }
+
+    .carousel-inner img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .testimonials {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial img {
+        width: 60px;
+        height: 60px;
+    }
+
+    footer {
+        padding: 20px 0; 
+        text-align: center;
+    }
+
+    .footer-contact, .maincontact, .mainemail {
+        margin: 0 auto;
+    }
+
+    .subemail {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #email {
+        max-width: 90%;
+        margin-bottom: 10px;
+    }
+
+
+
+
+}
